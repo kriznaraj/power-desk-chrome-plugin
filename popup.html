@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>PowerDesk!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/pretty-print-json.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/pretty-print-json.min.js"></script>
+</head>
+
+<body>
+  <div class="rec-container">
+    <form class="pd-report-form">
+      <fieldset>
+        <legend>PowerDesk - Fetch Report</legend>
+
+        <p>
+          <input type="text" id="pd-site-name" placeholder="Site Name">
+        </p>
+
+        <p>
+          <input type="text" id="pd-entity-id" placeholder="Entity Id">
+        </p>
+<!-- 
+        <p>
+          <select id="select">
+            <option value="">Choose...</option>
+            <optgroup label="Option group 1">
+              <option value="">Option 1</option>
+              <option value="">Option 2</option>
+              <option value="">Option 3</option>
+            </optgroup>
+            <optgroup label="Option group 2">
+              <option value="">Option 4</option>
+              <option value="">Option 5</option>
+              <option value="">Option 6</option>
+            </optgroup>
+          </select>
+        </p> -->
+
+
+        <p>
+          <button class="btn btn-fetch-report">
+            Fetch Report
+          </button>
+        </p>
+      </fieldset>
+    </form>
+
+    <div class="rec-row">
+      <div class="col-xs-6">
+        <div>
+          <pre><output id="report-data"></output></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/popup.js"></script>
+</body>
+
+</html>

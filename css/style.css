@@ -1,0 +1,32 @@
+body {
+  min-width: 360px;
+}
+
+.rec-container {
+  /* width: 287px;
+  height: 133px; */
+  background: #FFFFFF;
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); */
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.rec-row {
+  display: -webkit-box;
+}
+
+.desc {
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    width: 100%;
+  }
+}
+
+.btn {
+  background-color : silver;
+}

@@ -1,0 +1,49 @@
+{
+    "name": "PowerDesk",
+    "description": "PowerDesk",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "http://powerdesk.in.ngrok.io/*"
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/pd16.png",
+            "32": "/images/pd32.png",
+            "48": "/images/pd48.png",
+            "128": "/images/pd128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/pd16.png",
+        "32": "/images/pd32.png",
+        "48": "/images/pd48.png",
+        "128": "/images/pd128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.freshdesk.com/*"
+            ],
+            "css": [
+                "css/bootstrap.css",
+                "css/style.css"
+            ],
+            "js": [
+                "js/jquery.js",
+                "js/options.js",
+                "js/popup.js"
+            ]
+        }
+    ],
+    "options_page": "options.html"
+}
