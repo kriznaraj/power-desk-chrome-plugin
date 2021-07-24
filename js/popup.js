@@ -9,7 +9,7 @@ jQuery(".btn-fetch-report").click(() => {
       domain
     }).then(report => {
       console.log(report);
-      $('#report-data').text(JSON.stringify());
+      jQuery('#report-data').html(prettyPrintJson.toHtml(JSON.parse(report)));
       saveInLocalStorage('report', report);
     });
   });
