@@ -1,32 +1,110 @@
 body {
-  min-width: 360px;
+    min-width: 360px;
+    background-color: #bbdefb;
 }
 
 .rec-container {
-  /* width: 287px;
-  height: 133px; */
-  background: #FFFFFF;
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); */
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+    /* width: 287px;
+    height: 133px; */
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); */
+    margin: 12px 20px 12px 20px;
 }
 
 .rec-row {
-  display: -webkit-box;
+    display: -webkit-box;
 }
 
 .desc {
-  padding-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+legend {
+    background: #050502;
+    background: -webkit-linear-gradient(to bottom right, #050502 0%, #CF4848 57%);
+    background: -moz-linear-gradient(to bottom right, #050502 0%, #CF4848 57%);
+    background: linear-gradient(to bottom right, #050502 0%, #CF4848 57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 20px 0px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+
+.submit-action-btn {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.input-fields > *:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 360px) {
-  body {
-    width: 100%;
-  }
+    body {
+        width: 100%;
+    }
 }
 
-.btn {
-  background-color : silver;
+/*.btn {*/
+/*    background-color: silver;*/
+/*}*/
+
+.button {
+    color: #030000;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10rem;
+}
+
+/* Hover Effect*/
+
+.button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #9fcbd4;*/
+    background-color: #98bfc7;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #34c2ea;
+    /*background-color: #cfe3e8;*/
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.button:hover:before {
+    width: 100%;
 }
